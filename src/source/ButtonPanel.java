@@ -16,7 +16,6 @@ public class ButtonPanel extends JButton implements ActionListener {
 	JButton btnPlay = new JButton("PLAY");
 	ImageIcon help = new ImageIcon("help.png");
 	JButton btnHelp = new JButton("HELP");
-	private BufferedImage icon;
 
 	public ButtonPanel() {
 
@@ -26,7 +25,7 @@ public class ButtonPanel extends JButton implements ActionListener {
 		setLayout(new FlowLayout());
 		// setLayout(null);
 		try {
-			icon = ImageIO.read(Board.class.getResource("/icon.png"));
+			BufferedImage icon = ImageIO.read(Board.class.getResource("/icon.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

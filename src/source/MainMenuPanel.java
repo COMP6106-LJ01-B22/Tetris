@@ -24,16 +24,13 @@ public class MainMenuPanel extends JPanel {
 	BufferedImage cube;
 	BufferedImage img;
 	Clip clip;
-	private String highscore = "0";
 	private int currHighscore = 0;
-	private int newHighscore = 0;
-
-	private float h = (float) 0.53358333;
-	private float s = (float) 0.5697;
-	private float b = (float) 0.9569;
 
 	@Override
 	public void paint(Graphics g) {
+		float b = (float) 0.9569;
+		float s = (float) 0.5697;
+		float h = (float) 0.53358333;
 		setBackground(Color.getHSBColor(h, s, b));
 		super.paint(g);
 		g.drawImage(img, 40, 320, null);
@@ -184,10 +181,9 @@ public class MainMenuPanel extends JPanel {
 	}
 
 	public void setHighscore(int score) {
-		newHighscore = score;
-		if (newHighscore > currHighscore) {
-			currHighscore = newHighscore;
-			highscore = "" + currHighscore;
+		if (score > currHighscore) {
+			currHighscore = score;
+			String highscore = "" + currHighscore;
 		}
 	}
 }

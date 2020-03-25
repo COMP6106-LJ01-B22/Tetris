@@ -24,12 +24,11 @@ public class HowToPlayPanel extends JPanel {
 	int stat = 0;
 	JLabel lbl_title, lbl_up, lbl_down, lbl_right, lbl_left, lbl_shift, lbl_space, lbl_space2, back;
 
-	private float h = (float) 0.53358333;
-	private float s = (float) 0.5697;
-	private float b = (float) 0.9569;
-
 	@Override
 	public void paint(Graphics g) {
+		float b = (float) 0.9569;
+		float s = (float) 0.5697;
+		float h = (float) 0.53358333;
 		setBackground(Color.getHSBColor(h, s, b));
 		super.paint(g);
 		g.drawImage(icon, 310, 400, 500, 740, null);
