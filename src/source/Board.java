@@ -50,10 +50,7 @@ public class Board extends JPanel implements KeyListener {
 		float s = (float) 0.5697;
 		float b = (float) 0.9569;
 		setBackground(Color.getHSBColor(h, s, b));
-		bg = getResource("/totoro.png");
-		gO = getResource("/game_over.jpg");
-		frame2 = getResource("/totoroFrames.png");
-		blocks = getResource("/tetris_blocks_21.png");
+		loadResources();
 
 		for (int row = 0; row < 4; row++) {
 			Arrays.fill(board[row], 0);
@@ -95,6 +92,13 @@ public class Board extends JPanel implements KeyListener {
 
 		getNextPiece();
 		// getPiece();
+	}
+
+	private void loadResources() {
+		bg = getResource("/totoro.png");
+		gO = getResource("/game_over.jpg");
+		frame2 = getResource("/totoroFrames.png");
+		blocks = getResource("/tetris_blocks_21.png");
 	}
 
 	public static BufferedImage getResource(String name) {
