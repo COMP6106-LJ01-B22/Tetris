@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 
 public class Piece {
 	protected BufferedImage block;
-	protected int coords[][];
+	protected int[][] coords;
 
 	protected Board board;
 	protected int color;

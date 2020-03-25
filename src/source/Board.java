@@ -33,7 +33,7 @@ public class Board extends JPanel implements KeyListener {
 	private int holdIDX = 7;
 	private int nextIDX;
 
-	private final Piece piece[] = new Piece[7];
+	private final Piece[] piece = new Piece[7];
 	private CurrentPiece currentPiece; // current piece being positioned/played
 	private NextPiece nextPiece;
 	private HoldPiece holdPiece = null;
