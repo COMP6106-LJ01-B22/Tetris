@@ -92,7 +92,7 @@ public class CurrentPiece extends Piece {
 	// System.out.println(cX + " " + cY);
 
 	public void rotate() {
-		int[][] rotatedMatrix = null;
+		int[][] rotatedMatrix;
 
 		rotatedMatrix = getTranspose(coords);
 		getReverseMatrix(rotatedMatrix);
