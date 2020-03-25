@@ -95,7 +95,7 @@ public class CurrentPiece extends Piece {
 		int[][] rotatedMatrix = null;
 
 		rotatedMatrix = getTranspose(coords);
-		rotatedMatrix = getReverseMatrix(rotatedMatrix);
+		getReverseMatrix(rotatedMatrix);
 
 		if (cX < board.getIndentX() || cX + (rotatedMatrix[0].length * Board.BLOCKSIZE) > board.getBorderX()
 				|| cY + (rotatedMatrix.length * Board.BLOCKSIZE) < board.getIndentY()
@@ -135,7 +135,7 @@ public class CurrentPiece extends Piece {
 
 	}
 
-	private int[][] getReverseMatrix(int[][] matrix) {
+	private void getReverseMatrix(int[][] matrix) {
 		int middle = matrix.length / 2;
 
 		for (int i = 0; i < middle; i++) {
@@ -143,7 +143,6 @@ public class CurrentPiece extends Piece {
 			matrix[i] = matrix[matrix.length - i - 1];
 			matrix[matrix.length - i - 1] = m;
 		}
-		return matrix;
 
 	}
 
