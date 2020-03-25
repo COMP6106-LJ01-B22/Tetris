@@ -96,7 +96,7 @@ public class Board extends JPanel implements KeyListener {
 		piece[0] = new Piece(blocks.getSubimage(0, 0, BLOCKSIZE, BLOCKSIZE), new int[][] { { 1, 1, 1, 1 } }, this, 1); // the
 																														// stick
 
-		piece[1] = new Piece(blocks.getSubimage(1 * BLOCKSIZE, 0, BLOCKSIZE, BLOCKSIZE),
+		piece[1] = new Piece(blocks.getSubimage(BLOCKSIZE, 0, BLOCKSIZE, BLOCKSIZE),
 				new int[][] { { 1, 1, 0 }, { 0, 1, 1 } }, this, 2); // the dog (left)
 
 		piece[2] = new Piece(blocks.getSubimage(2 * BLOCKSIZE, 0, BLOCKSIZE, BLOCKSIZE),
