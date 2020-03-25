@@ -5,7 +5,8 @@ import java.awt.image.BufferedImage;
 
 public class CurrentPiece extends Piece {
 
-	private int normalSpeed = 1000, speedDown = 100, currentSpeed;
+	private int normalSpeed = 1000;
+	private int currentSpeed;
 	private long time, lastTime;
 
 	private boolean collisionY = false, collisionX = false, spacePressed = false;
@@ -172,7 +173,7 @@ public class CurrentPiece extends Piece {
 	}
 
 	public void speedDown() {
-		currentSpeed = speedDown;
+		currentSpeed = 100;
 	}
 
 	public void placeDown() {

@@ -299,8 +299,7 @@ public class Board extends JPanel implements KeyListener {
 	}
 
 	public int getBorderY() {
-		int borderY = 25 * 24 + indentY;
-		return borderY;
+		return 25 * 24 + indentY;
 	}
 
 	public boolean getGameOver() {
@@ -308,8 +307,7 @@ public class Board extends JPanel implements KeyListener {
 	}
 
 	public int getBorderX() {
-		int borderX = 25 * 10 + indentX;
-		return borderX;
+		return 25 * 10 + indentX;
 	}
 
 	public boolean isShiftPressed() {
