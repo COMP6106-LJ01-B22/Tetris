@@ -52,32 +52,13 @@ public class Board extends JPanel implements KeyListener {
 		float s = (float) 0.5697;
 		float b = (float) 0.9569;
 		setBackground(Color.getHSBColor(h, s, b));
-		try {
-			bg = ImageIO.read(Board.class.getResource("/totoro.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		// new gameOver
-		try {
-			gO = ImageIO.read(Board.class.getResource("/game_over.jpg"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			frame2 = ImageIO.read(Board.class.getResource("/totoroFrames.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		bg = getResource("/totoro.png");
+		gO = getResource("/game_over.jpg");
+		frame2 = getResource("/totoroFrames.png");
+		blocks = getResource("/tetris_blocks_21.png");
 
 		for (int row = 0; row < 4; row++) {
 			Arrays.fill(board[row], 0);
-		}
-		try {
-			blocks = ImageIO.read(Board.class.getResource("/tetris_blocks_21.png")); // masukkin gambar
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 
 		int delay = 1000 / 60;
@@ -116,6 +97,17 @@ public class Board extends JPanel implements KeyListener {
 
 		getNextPiece();
 		// getPiece();
+	}
+
+	public static BufferedImage getResource(String name) {
+		BufferedImage image = null;
+		try {
+			image = ImageIO.read(Board.class.getResource(name));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return image;
 	}
 
 	public void update() {

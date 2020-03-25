@@ -55,50 +55,15 @@ public class HowToPlayPanel extends JPanel {
 
 	public HowToPlayPanel() {
 		setLayout(null);
-		try {
-			icon = ImageIO.read(Board.class.getResource("/icon.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			icon1 = ImageIO.read(Board.class.getResource("/icon1.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			shift = ImageIO.read(Board.class.getResource("/shift.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			space = ImageIO.read(Board.class.getResource("/space.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		icon = Board.getResource("/icon.png");
+		icon1 = Board.getResource("/icon1.png");
+		shift = Board.getResource("/shift.png");
+		space = Board.getResource("/space.png");
+		up = Board.getResource("/up.png");
+		down = Board.getResource("/down.png");
+		left = Board.getResource("/left.png");
+		right = Board.getResource("/right.png");
 
-		try {
-			up = ImageIO.read(Board.class.getResource("/up.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			down = ImageIO.read(Board.class.getResource("/down.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			left = ImageIO.read(Board.class.getResource("/left.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			right = ImageIO.read(Board.class.getResource("/right.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		lbl_title = new JLabel("HOW TO PLAY", JLabel.CENTER);
 		lbl_title.setBounds(100, 20, 500, 50);
 		lbl_title.setFont(new Font("Orange Kid", Font.BOLD, 26));

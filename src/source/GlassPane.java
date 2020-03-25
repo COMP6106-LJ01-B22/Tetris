@@ -10,6 +10,8 @@ import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 
+import static source.Board.getResource;
+
 public class GlassPane extends JComponent {
 
 	private BufferedImage border;
@@ -19,22 +21,9 @@ public class GlassPane extends JComponent {
 	private Board board;
 
 	public GlassPane() {
-
-		try {
-			border = ImageIO.read(GlassPane.class.getResource("/border.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			nexts = ImageIO.read(GlassPane.class.getResource("/nextText.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			hold = ImageIO.read(GlassPane.class.getResource("/holdText.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		border = Board.getResource("/border.png");
+		nexts = Board.getResource("/nextText.png");
+		hold = Board.getResource("/holdText.png");
 	}
 
 	@Override
