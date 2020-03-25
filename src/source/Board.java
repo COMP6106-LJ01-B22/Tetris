@@ -24,9 +24,7 @@ public class Board extends JPanel implements KeyListener {
 	private String scoreString = "0";
 	private final int indentY = 25 * 2;
 	private final int indentX = 25;
-	private final int borderY = 25 * 24 + indentY;
 
-	private final int borderX = 25 * 10 + indentX;
 	public static final int BLOCKSIZE = 25;
 	private final int GRIDHEIGHT = 24, GRIDWIDTH = 10;
 
@@ -42,18 +40,16 @@ public class Board extends JPanel implements KeyListener {
 	private Timer timer;
 
 	private final int FPS = 60;
-	private final int delay = 1000 / 60;
 	private boolean gameOver = false;
 	private boolean shiftPressed = false; // apakah shift di tekan
 	private boolean shiftPieceAvail = false; // cek apakah ada untuk diganti, ini baru ada setelah pertama shift
 	private boolean playerShifted = false; // ck apakah selama main, shift udah pernah dipencet
 	private boolean shifted = false; // cuman boleh sekali shift per piece
 
-	private float h = (float) 0.53358333;
-	private float s = (float) 0.5697;
-	private float b = (float) 0.9569;
-
 	public Board() {
+		float h = (float) 0.53358333;
+		float s = (float) 0.5697;
+		float b = (float) 0.9569;
 		setBackground(Color.getHSBColor(h, s, b));
 		try {
 			bg = ImageIO.read(Board.class.getResource("/totoro.png"));
@@ -85,6 +81,7 @@ public class Board extends JPanel implements KeyListener {
 			e.printStackTrace();
 		}
 
+		int delay = 1000 / 60;
 		timer = new Timer(delay, new ActionListener() {
 
 			@Override
@@ -307,6 +304,7 @@ public class Board extends JPanel implements KeyListener {
 	}
 
 	public int getBorderY() {
+		int borderY = 25 * 24 + indentY;
 		return borderY;
 	}
 
@@ -315,6 +313,7 @@ public class Board extends JPanel implements KeyListener {
 	}
 
 	public int getBorderX() {
+		int borderX = 25 * 10 + indentX;
 		return borderX;
 	}
 
