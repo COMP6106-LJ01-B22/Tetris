@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -71,9 +72,7 @@ public class Board extends JPanel implements KeyListener {
 		}
 
 		for (int row = 0; row < 4; row++) {
-			for (int col = 0; col < board[row].length; col++) {
-				board[row][col] = 0;
-			}
+			Arrays.fill(board[row], 0);
 		}
 		try {
 			blocks = ImageIO.read(Board.class.getResource("/tetris_blocks_21.png")); // masukkin gambar
