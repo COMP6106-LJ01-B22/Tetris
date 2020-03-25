@@ -207,7 +207,7 @@ public class Board extends JPanel implements KeyListener {
 					currentPiece = new CurrentPiece(piece[curIDX].getBlock(), piece[curIDX].getCoords(), this,
 							piece[curIDX].getColor());
 					holdIDX = holdPiece.getColor() - 1;
-				} else if (!shiftPieceAvail) {
+				} else {
 					curIDX = nextPiece.getColor() - 1;
 					currentPiece = new CurrentPiece(piece[nextIDX].getBlock(), piece[nextIDX].getCoords(), this,
 							piece[nextIDX].getColor());
