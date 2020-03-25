@@ -81,13 +81,9 @@ public class Board extends JPanel implements KeyListener {
 		}
 
 		int delay = 1000 / 60;
-		timer = new Timer(delay, new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				update();
-				repaint();
-			}
+		timer = new Timer(delay, e -> {
+			update();
+			repaint();
 		});
 
 		timer.start();
